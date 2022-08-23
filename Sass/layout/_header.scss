@@ -1,0 +1,71 @@
+.header{
+    padding: 10px 0px;
+    overflow: hidden;
+    border-bottom: 1px solid $greyColor;
+    .logo{
+        width: 30%;
+        float: $float-left;
+        position: relative;
+        @media #{$maxMobile} {
+            width: 100%;
+            text-align: $text-left;  
+        }
+        @media #{$minSmall} and #{$maxSmall} {
+            width: 100%;
+            float: none;
+            text-align: center;  
+        }
+        h1{
+            margin-bottom: 0;
+        }
+        p{
+
+        }
+        .the-toggler{
+           
+        }
+    }
+    .navbar{
+        width: 70%;
+        float: $float-left;
+        background-color: $redColor;
+        margin-top: 21.44px;
+        border-radius: 15px;
+        overflow: hidden;
+        @media #{$minSmall} and #{$maxSmall} {
+            width: 100%;
+            float: none;
+            text-align: center;  
+            margin-top: 30px;
+        }
+        @media #{$minSmall}{
+            display: block !important; // عشان أضمن الشاشات من سمول وأطلع ما يتأثر الناف بار تبعها ويختفي بناء على شاشة الموبايل
+        }
+        @media #{$maxMobile} {
+            display: none;
+            width: 100%;
+            border-radius: 0;
+        }        
+        li{
+            width: 25%;
+            float: $float-left;
+            font-size: 18px;
+            text-align: center;
+            @media #{$maxMobile} {
+                float: none;
+                width: 100%;
+                text-align: left;
+                padding: 0px 10px;
+            } 
+            a{ // ِيرث الايه من الال اي العرض فأنا بدي أعطي الال اي عرض في شاشات الجوال 100% مثلا وممكن طرق أخرى
+                display: inline-block;
+                color: #fff;
+                text-decoration: none;
+                padding: 20px 10px;
+                &:hover{
+                    color: $greyColor;
+                }
+            }
+        }
+    }
+}

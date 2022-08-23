@@ -1,0 +1,119 @@
+.footer{
+    background-color: #e2e2e2;
+    overflow: hidden;
+    padding: 30px 0px 0px;
+    margin-top: 50px;
+    .gallery,.info,.contact {
+        float: $float-left;
+    }
+
+    .gallery{
+        width: 50%;
+        .img-box{
+            overflow: hidden;
+            margin-bottom: 20px;
+            img{
+                @media #{$minSmall} {
+                    float: $float-left;
+                }
+                width: 170px;
+                height:170px;
+                object-fit: cover;         
+               }
+            .text{
+                @media #{$minSmall} {
+                    float: $float-left;
+                    margin: 0px 15px;
+                    width: calc(100% - 200px);// 200px = 170px weight + 30px padding l-r
+                }                
+                h4{
+                    color: $redColor;
+                    margin: 20px 0px 0px;
+                }
+                p{
+                    color: #888;
+                    line-height: 1.6;
+                    margin-top: 8px;
+                }
+            } 
+            
+        }
+        @media #{$maxSmall} {
+            width: 100%;
+        }
+    }
+    .info{
+        width: 28%;
+        ul{
+            color:#888;
+            line-height: 1.6;
+            li{
+                span{
+                    color: $redColor;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        h4{
+            color: #888;
+            font-weight: bold;
+            margin: 0px 0px;
+        }
+        p{
+            color: #888;
+            margin-top: 5px;
+        }
+        @media #{$maxSmall} {
+            width: 50%;
+        }
+        @media #{$maxMobile} {
+            width: 100%;
+        }
+    }
+    .contact{
+        width: 22%;
+        input[type="text"],
+        input[type="email"],
+        textarea{
+            border: 1px solid #888;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 10px;
+            width: 100%;
+            resize: none;
+        }
+        @media #{$maxSmall} {
+            width: 50%;
+        }
+        @media #{$maxMobile} {
+            width: 100%;
+        }
+    }
+    .section-title{
+        color: #444;
+        font-weight: normal;
+        margin-bottom: 10px;
+    }
+    .copy-right{
+        padding: 25px 0px;
+        border-top: 1px solid #c5c5c5;
+        overflow: hidden;
+        color: #888;
+        @media #{$minSmall}{
+          .text,.author{
+            float:$float-left;
+            width:50%;
+        }  
+        }
+        @media #{$minSmall}{
+            .author{
+                text-align: $text-right; // أو بعطيه فلوت رايت وخلص عشان يروح لليمين
+            } 
+        }
+        @media #{$maxMobile} {
+            .author{
+                margin-top: 20px;
+            } 
+        }
+    }
+}

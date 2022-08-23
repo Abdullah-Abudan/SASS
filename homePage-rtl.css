@@ -1,0 +1,47 @@
+.header .logo {
+  float: right;
+}
+@media (max-width:767px) {
+  .header .logo {
+    text-align: right;
+  }
+}
+.header .logo .the-toggler {
+  right: auto;
+  left: 15px;
+}
+.header .navbar {
+  float: right;
+}
+.header .navbar li {
+  float: right;
+}
+@media (max-width:767px) {
+  .header .navbar li {
+    text-align: left;
+  }
+}
+
+.footer .gallery, .footer .info, .footer .contact {
+  float: right;
+}
+@media (min-width:768px) {
+  .footer .gallery .img-box img {
+    float: right;
+  }
+}
+@media (min-width:768px) {
+  .footer .gallery .img-box .text {
+    float: right;
+  }
+}
+@media (min-width:768px) {
+  .footer .copy-right .text, .footer .copy-right .author {
+    float: right;
+  }
+}
+@media (min-width:768px) {
+  .footer .copy-right .author {
+    text-align: left;
+  }
+}

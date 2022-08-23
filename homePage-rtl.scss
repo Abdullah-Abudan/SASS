@@ -1,0 +1,62 @@
+@import  'Sass/helpers/variables'; 
+
+$float-left:right;
+$float-right:left;
+
+$text-right:left;
+$text-left:right;
+
+.header{
+    .logo{
+        float: $float-left;
+        @media #{$maxMobile} {
+            text-align: $text-left;  
+        }
+        .the-toggler{
+            right: auto;
+            left: 15px;
+        }
+    }
+    .navbar{
+        float: $float-left;
+        li{
+            float: $float-left;
+            @media #{$maxMobile} {
+                text-align: left;
+            }   
+        }
+    }
+}
+.footer{
+    .gallery,.info,.contact {
+        float: $float-left;
+    }
+
+    .gallery{
+        .img-box{
+
+            img{
+                @media #{$minSmall} {
+                    float: $float-left;
+                }   
+               }
+            .text{
+                @media #{$minSmall} {
+                    float: $float-left;
+                }                
+            } 
+        }
+    }
+    .copy-right{
+        @media #{$minSmall}{
+          .text,.author{
+            float:$float-left;
+        }  
+        }
+        @media #{$minSmall}{
+            .author{
+                text-align: $text-right; // أو بعطيه فلوت رايت وخلص عشان يروح لليمين
+            } 
+        }
+    }
+}
